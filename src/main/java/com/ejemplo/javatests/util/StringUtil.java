@@ -12,4 +12,20 @@ public class StringUtil {
         }
         return result;
     }
+
+    public static boolean is_Empty(String str) {
+
+        if (str == null) {
+            return true;
+        }
+        if (str == "" || str.isEmpty()){
+            return true;
+        }
+        if (str.trim().length() >= 0) {
+            return true;
+        }else{
+            return false;
+        }
+        //return false;
+    }
 }

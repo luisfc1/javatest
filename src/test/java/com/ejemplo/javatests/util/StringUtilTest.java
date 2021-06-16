@@ -33,4 +33,24 @@ public class StringUtilTest {
 
     }
 
+    @Test
+    public void empty_string(){
+        Assert.assertEquals(true,StringUtil.is_Empty(""));
+    }
+
+    @Test
+    public void not_empty_string(){
+        Assert.assertEquals(true,StringUtil.is_Empty("hola"));
+    }
+
+    @Test
+    public void null_string(){
+        Assert.assertEquals(true, StringUtil.is_Empty(null));
+    }
+
+    @Test
+    public void string_with_space(){
+        Assert.assertEquals(true, StringUtil.is_Empty("    "));
+    }
+
 }
